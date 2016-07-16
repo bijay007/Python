@@ -1,0 +1,13 @@
+a = ['chicken',5,'alpha','5+0','male']
+print a
+print a[0]
+print a[2]+a[-1]+' '+a[2]+a[4]
+print a[:3]
+print 'A'+' '+a[0]
+print a[1+2]
+a.append('wine')
+print a
+a[:2]=[]
+print a
+a[:]=[]
+print a
