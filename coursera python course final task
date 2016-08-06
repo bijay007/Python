@@ -1,0 +1,15 @@
+database = dict()
+tuplelist = list()
+with open('numbers.txt') as handle:
+  for lines in handle:
+    if lines.startswith('From '):
+      lines = lines.split()
+      time = lines[5]
+      time = time.split(':')
+      hour = time[0]
+      database[hour] = database.get(hour, 0) + 1
+for key, val in database.items():
+    tuplelist.append((key, val))
+    tuplelist.sort()
+for key, val in tuplelist:
+    print key, val
